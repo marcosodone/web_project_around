@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <!-- Mudança do idioma -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,191 +11,168 @@
   </head>
   <body>
     <div class="page">
+      <!-- Cabeçalho da página -->
       <header class="header">
-        <img
-          class="header__logo"
-          src="./images/header-logo.svg"
-          alt="Logotipo do cabeçalho"
-        />
+        <img src="images/headerlogo.svg" alt="Logo" class="header__logo" />
       </header>
+      
+      <!-- Conteúdo principal da página -->
       <main class="content">
+        <!-- Seção do perfil do usuário -->
         <section class="profile">
-          <div class="profile__content">
-            <img
-              class="profile__avatar"
-              src="./images/avatar-image.jpg"
-              alt="Imagem de Jacques Costeau"
-            />
-            <div class="profile__info">
-              <h1 class="profile__name">Jacques Costeau</h1>
-              <h2 class="profile__description">Explorador</h2>
-            </div>
-            <button
-              class="profile__button profile__button_type_edit"
-              type="button"
-              id="edit-button"
-            >
+          <img
+            src="images/avatarprofile.jpg"
+            alt="Jacques Cousteau"
+            class="profile__image"
+          />
+          <div class="profile__info">
+            <div class="profile__name">
+              <p class="profile__text">Jacques Cousteau</p>
               <img
-                class="profile__icon profile__icon_type_edit"
-                src="./images/profile-edit-button.svg"
-                alt="Botão de editar"
+                src="images/editbuttonprofile.svg"
+                alt="Botão Editar"
+                class="profile__edit-button"
               />
-            </button>
+            </div>
+            <p class="profile__profession">Explorador</p>
           </div>
-          <button
-            class="profile__button profile__button_type_add"
-            type="button"
-            id="add-button"
-          >
-            <img
-              class="profile__icon profile__icon_type_add"
-              src="./images/profile-add-button.svg"
-              alt="Botão de adicionar"
-            />
-          </button>
+          <img
+            src="images/addbuttonprofile.png"
+            alt="Botão Adicionar"
+            class="profile__add-button"
+          />
         </section>
-        <section class="elements">
-          <div class="elements__cards">
-            <template class="elements__template">
-              <div class="elements__card">
-                <button class="elements__image-button">
-                  <img class="elements__image" src=" " alt="Imagem" />
-                </button>
-                <button
-                  class="elements__button elements__button_type_trash"
-                  type="button"
-                >
-                  <img
-                    class="elements__icon elements__icon_type_trash-cap"
-                    src="./images/trashcap.svg"
-                    alt="Botão de lixeira"
-                  />
-                  <img
-                    class="elements__icon elements__icon_type_trash-can"
-                    src="./images/trashcan.svg"
-                    alt="Botão de lixeira"
-                  />
-                </button>
-                <div class="elements__title">
-                  <h3 class="elements__text"></h3>
-                  <button
-                    class="elements__button elements__button_type_like"
-                    type="button"
-                  >
-                    <img
-                      class="elements__icon elements__icon_type_like-icon"
-                      src="./images/like.svg"
-                      alt="Botão de curtida"
-                    />
-                  </button>
-                </div>
-                <div class="elements__window">
-                  <div class="elements__container">
-                    <button
-                      class="elements__button elements__button_type_close"
-                      type="button"
-                      id="window-close-button"
-                    >
-                      <img
-                        class="elements__icon elements__icon_type_close"
-                        src="./images/popup-close-icon.svg"
-                        alt="Fechar"
-                      />
-                    </button>
-                    <img class="elements__window-image" src=" " alt="Imagem" />
-                    <h3 class="elements__window-name"></h3>
-                  </div>
-                </div>
-              </div>
-            </template>
-          </div>
-        </section>
-      </main>
-      <footer class="footer">
-        <p class="footer__copyright">© 2024 Around The U.S.</p>
-      </footer>
-      <div class="popup" id="profile">
-        <div class="popup__container">
-          <button class="popup__button popup__button_type_close" type="button">
+        
+        <!-- Seção onde os cartões serão adicionados -->
+        <section class="elements"></section>
+
+        <!-- Template de cartão, usado como base para criar novos cartões dinamicamente -->
+        <template class="template-card">
+          <article class="elements__card">
+            <img src="." alt="" class="elements__image" />
             <img
-              class="popup__icon"
-              src="./images/popup-close-icon.svg"
-              alt="Fechar"
+              src="./images/lixeira.svg"
+              alt="Imagem Lixeira"
+              class="elements__image-trash"
             />
-          </button>
-          <h2 class="popup__title">Editar Perfil</h2>
+            <div class="elements__text">
+              <h1 class="elements__title"></h1>
+              <img
+                src="./images/like.svg"
+                alt="Coração"
+                class="elements__image-like"
+              />
+            </div>
+          </article>
+        </template>
+
+        <!-- Popup para editar o perfil -->
+        <div class="popup">
+          <div class="popup__overlay"></div>
           <form class="popup__form">
-            <fieldset class="popup__name">
-              <input
-                class="popup__item popup__item_type_name"
-                type="text"
-                name="name"
-                placeholder="Nome"
-                value="Jacques Costeau"
-                required
-              />
-              <input
-                class="popup__item popup__item_type_about"
-                type="text"
-                name="name"
-                placeholder="Sobre mim"
-                value="Explorador"
-                required
-              />
-              <button
-                class="popup__button popup__button_type_send"
-                type="submit"
-              >
-                Guardar
-              </button>
-            </fieldset>
-          </form>
-        </div>
-      </div>
-      <div class="popup" id="add-popup">
-        <div class="popup__container">
-          <button
-            class="popup__button popup__button_type_close"
-            type="button"
-            id="close-add-popup"
-          >
             <img
-              class="popup__icon"
-              src="./images/popup-close-icon.svg"
-              alt="Fechar"
+              src="images/CloseIcon.png"
+              alt="Botão Fechar"
+              class="popup__button-closed"
             />
-          </button>
-          <h2 class="popup__title">Novo Lugar</h2>
-          <form class="popup__form" id="add-form">
-            <fieldset class="popup__name">
-              <input
-                class="popup__item popup__item_type_name"
-                id="place-input"
-                type="text"
-                name="name"
-                placeholder="Título"
-                required
-              />
-              <input
-                class="popup__item popup__item_type_about"
-                id="link-input"
-                type="text"
-                name="name"
-                placeholder="Link da imagem"
-                required
-              />
-              <button
-                class="popup__button popup__button_type_send"
-                id="add-card-button"
-                type="submit"
-              >
-                Guardar
-              </button>
-            </fieldset>
+            <h3 class="popup__header">Editar perfil</h3>
+            <input
+              type="text"
+              id="input-name"
+              class="popup__name popup__input"
+              minlength="2"
+              maxlength="40"
+              placeholder="Jacques Cousteau"
+              required
+            />
+            <span class="popup__error-visible input-name-error">
+
+            </span>
+
+            <input
+              type="text"
+              id="input-description"
+              class="popup__description popup__input"
+              minlength="2"
+              maxlength="200"
+              placeholder="Explorador"
+              required
+            />
+            <span class="popup__error-visible input-description-error">
+
+            </span>
+
+            <button type="submit" class="popup__button-create popup__button">
+              Guardar
+            </button>
           </form>
         </div>
-      </div>
+
+        <!-- Popup para adicionar novo cartão -->
+        <div class="popup" id="popup-card">
+          <div class="popup__overlay"></div>
+          <form class="popup__card-form popup__form">
+            <img
+              src="images/CloseIcon.png"
+              alt="Botão Fechar"
+              class="popup__card-button-closed"
+            />
+            <h3 class="popup__card-header">Novo Local</h3>
+            <input
+              type="text"
+              id="input-title"
+              class="popup__card-title popup__input"
+              value=""
+              minlength="2"
+              maxlength="40"
+              placeholder="Título"
+              required
+            />
+            <span class="popup__error-visible input-title-error"></span>
+
+            <input
+              type="url"
+              id="input-url"
+              class="popup__card-url popup__input"
+              value=""
+              minlength="2"
+              placeholder="Link da imagem"
+              required
+            />
+            <span class="popup__error-visible input-url-error"> </span>
+
+            <button
+              type="submit"
+              class="popup__card-button-create popup__button"
+            >
+             Guardar
+            </button>
+          </form>
+        </div>
+
+        <!-- Popup para visualizar a imagem em tamanho maior -->
+        <div class="popup" id="popup-image">
+          <div class="popup__overlay"></div>
+          <div class="popup__image-content">
+            <img
+              src="images/CloseIcon.png"
+              alt="Botão Fechar"
+              class="popup__image-button-closed"
+            />
+            <img src="." alt="" class="popup__image-photo" />
+            <p class="popup__image-name"></p>
+          </div>
+        </div>
+      </main>
+
+      <!-- Rodapé da página -->
+      <footer class="footer">
+        <p class="footer__copyright">&copy 2024 Around The U.S.</p>
+      </footer>
     </div>
-    <script src="./scripts/script.js"></script>
+
+    <!-- Scripts da página -->
+    <script src="./script/script.js"></script>
+    <script src="./script/validate.js"></script>
   </body>
 </html>

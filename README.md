@@ -1,15 +1,16 @@
-# Proyecto 5: "Around"
+A página web 'Around' é o projeto do sprint 09, seguindo o sprint 08 no programa de Desenvolvedor Web da Triple Ten. Desenvolvida utilizando HTML e CSS, baseou-se em um design detalhado no Figma.
 
-La página web de "Around" es el quinto proyecto en el programa de Ingeniería de software en Triple Ten. Fue creado utilizando HTML y CSS, con base en un informe de diseño en figma.
+- Características do projeto:
 
-## Características del proyecto
+Utilização de HTML5 semântico
+Layout flexível com Flexbox
+Posicionamento absoluto e fixo
+Responsividade através de media queries
+Integração de princípios básicos de JavaScript para funcionalidades como botões e alteração dinâmica de conteúdo baseada em formulários.
 
-- HTML5 semántico
-- Flexbox
-- Posicionamiento absoluto y fijo
-- Media queries
-- FIGMA
-- Principios de JAVA Botones y cambio de HTML en base a formulario
+- Alterações realizadas:
 
-## Dirección en GitPages
-https://liscarolina.github.io/web_project_around/
+Melhoria na estrutura e organização do código
+Adição de novas funcionalidades em JavaScript
+Criação de novos blocos CSS
+Refinamento do HTML, removendo trechos redundantes e desnecessários."
